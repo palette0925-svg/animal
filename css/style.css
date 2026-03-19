@@ -1,3 +1,168 @@
-
+/*----------
+variable
+------------*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
+:root{
+  --color-main:#505050;
+  --color-font:#0D96A0
+}
+
+/*----------
+base
+-----------*/
+html{
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-all;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  font-size: 10px;
+}
+
+body{
+  font-family: "Noto Sans JP",sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  color:var(--color-main);
+  letter-spacing: 0;
+  font-size: 1.8rem;
+  line-height: calc(33/18);
+  margin-top: 5rem;
+}
+
+.container{
+  width: 100%;
+  overflow: hidden;
+}
+
+/*-------------
+common
+---------------*/
+@media screen and (max-width: 767px) {
+  .pc{
+    display: none !important;
+  }
+}
+@media screen and (min-width: 768px){
+  .sp{
+    display: none !important;
+  }
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inner{
+  max-width: 960px;
+  margin-inline:auto;
+}
+
+.section-title{
+  text-align: center;
+}
+
+.section-title h3{
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height:calc(36/25);
+  color: var(--color-main);
+}
+
+/* header */
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.header__logo{
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.header__logo img{
+  width: 2.5rem;
+  height: auto;
+}
+
+.header__logo-title{
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height:calc(33/18);
+  color: var(--color-main);
+}
+
+.header__contents{
+  padding-inline: 3rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav ul{
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* fv */
+.fv{
+  height: 50rem;
+}
+
+.fv__image{
+  width: 100%;
+  height: 50rem;
+}
+
+.fv__image img{
+  width: 100%;
+  height: 100%;
+  aspect-ratio: calc(500/960*100%);
+}
+
+.fv__contents{
+  position: absolute;
+  top: 30%;
+  left:0;
+  transform: translateY(-30%);
+  background:rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  width: 49.2rem;
+  height: 21rem;
+}
+
+.fv__catch{
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  transform: translate(-20%,-30%);
+}
+
+.fv__catch p{
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height:calc(36/25);
+  margin-top:2.3rem;
+}
+
+.fv__catch h2{
+  width: 35.8rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height:calc(60/40) ;
+  color:var(--color-font);
+  margin-top: 0.8rem;
+}
